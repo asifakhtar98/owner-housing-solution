@@ -72,107 +72,108 @@ function ListingDetailPage() {
       <Breadcrumbs items={breadcrumbs} />
 
       <article className="detail-page" itemScope itemType="https://schema.org/RealEstateListing">
-        {/* Hero Image */}
-        <div className="detail-page__image-section">
-          <img
-            src={property.images[0]}
-            alt={property.title}
-            className="detail-page__image"
-            itemProp="image"
-            width="960"
-            height="400"
-          />
-        </div>
+        <div className="detail-page__main">
+          {/* Hero Image */}
+          <div className="detail-page__image-section">
+            <img
+              src={property.images[0]}
+              alt={property.title}
+              className="detail-page__image"
+              itemProp="image"
+              width="960"
+              height="400"
+            />
+          </div>
 
-        {/* Header: Title + Price */}
-        <header className="detail-page__header">
-          <h1 className="detail-page__title" itemProp="name">{property.title}</h1>
-          <div>
-            <span className="detail-page__price">
-              {formatPrice(property.price, property.priceUnit)}
+          {/* Header: Title + Price */}
+          <header className="detail-page__header">
+            <h1 className="detail-page__title" itemProp="name">{property.title}</h1>
+            <div>
+              <span className="detail-page__price">
+                {formatPrice(property.price, property.priceUnit)}
+              </span>
+              {property.priceUnit === 'monthly' && (
+                <span className="detail-page__price-unit"> /month</span>
+              )}
+            </div>
+          </header>
+
+          {/* Location */}
+          <div className="detail-page__location">
+            <span aria-hidden="true">📍</span>
+            <span itemProp="address">
+              {property.location.locality}, {property.location.city}, {property.location.state} — {property.location.pincode}
             </span>
-            {property.priceUnit === 'monthly' && (
-              <span className="detail-page__price-unit"> /month</span>
+          </div>
+
+          {/* Badges */}
+          <div className="detail-page__badges">
+            <span className={`badge badge--${property.category}`}>
+              {property.category === 'buy' ? 'For Sale' : 'For Rent'}
+            </span>
+            <span className="badge badge--type">
+              {getPropertyTypeLabel(property.type)}
+            </span>
+            {property.contact.isOwner && (
+              <span className="badge badge--owner">Direct Owner</span>
+            )}
+            {property.furnishing !== 'na' && (
+              <span className="badge badge--furnishing">
+                {getFurnishingLabel(property.furnishing)}
+              </span>
             )}
           </div>
-        </header>
 
-        {/* Location */}
-        <div className="detail-page__location">
-          <span aria-hidden="true">📍</span>
-          <span itemProp="address">
-            {property.location.locality}, {property.location.city}, {property.location.state} — {property.location.pincode}
-          </span>
-        </div>
-
-        {/* Badges */}
-        <div className="detail-page__badges">
-          <span className={`badge badge--${property.category}`}>
-            {property.category === 'buy' ? 'For Sale' : 'For Rent'}
-          </span>
-          <span className="badge badge--type">
-            {getPropertyTypeLabel(property.type)}
-          </span>
-          {property.contact.isOwner && (
-            <span className="badge badge--owner">Direct Owner</span>
-          )}
-          {property.furnishing !== 'na' && (
-            <span className="badge badge--furnishing">
-              {getFurnishingLabel(property.furnishing)}
-            </span>
-          )}
-        </div>
-
-        {/* Stats Grid */}
-        <div className="detail-page__stats">
-          <div className="detail-page__stat">
-            <div className="detail-page__stat-value">{property.area}</div>
-            <div className="detail-page__stat-label">{property.areaUnit}</div>
-          </div>
-          {property.bedrooms > 0 && (
+          {/* Stats Grid */}
+          <div className="detail-page__stats">
             <div className="detail-page__stat">
-              <div className="detail-page__stat-value">{property.bedrooms}</div>
-              <div className="detail-page__stat-label">Bedrooms</div>
+              <div className="detail-page__stat-value">{property.area}</div>
+              <div className="detail-page__stat-label">{property.areaUnit}</div>
             </div>
-          )}
-          {property.bathrooms > 0 && (
+            {property.bedrooms > 0 && (
+              <div className="detail-page__stat">
+                <div className="detail-page__stat-value">{property.bedrooms}</div>
+                <div className="detail-page__stat-label">Bedrooms</div>
+              </div>
+            )}
+            {property.bathrooms > 0 && (
+              <div className="detail-page__stat">
+                <div className="detail-page__stat-value">{property.bathrooms}</div>
+                <div className="detail-page__stat-label">Bathrooms</div>
+              </div>
+            )}
             <div className="detail-page__stat">
-              <div className="detail-page__stat-value">{property.bathrooms}</div>
-              <div className="detail-page__stat-label">Bathrooms</div>
+              <div className="detail-page__stat-value">{getRelativeTime(property.postedDate)}</div>
+              <div className="detail-page__stat-label">Posted</div>
             </div>
-          )}
-          <div className="detail-page__stat">
-            <div className="detail-page__stat-value">{getRelativeTime(property.postedDate)}</div>
-            <div className="detail-page__stat-label">Posted</div>
           </div>
-        </div>
 
-        {/* Description */}
-        <section className="detail-page__section">
-          <h2 className="detail-page__section-title">Description</h2>
-          <p className="detail-page__description" itemProp="description">
-            {property.description}
-          </p>
-        </section>
-
-        {/* Features */}
-        {property.features.length > 0 && (
+          {/* Description */}
           <section className="detail-page__section">
-            <h2 className="detail-page__section-title">Amenities & Features</h2>
-            <ul className="detail-page__features">
-              {property.features.map((feature) => (
-                <li key={feature} className="detail-page__feature">
-                  {feature}
-                </li>
-              ))}
-            </ul>
+            <h2 className="detail-page__section-title">Description</h2>
+            <p className="detail-page__description" itemProp="description">
+              {property.description}
+            </p>
           </section>
-        )}
 
-        {/* Contact */}
-        <section className="detail-page__section">
-          <h2 className="detail-page__section-title">Contact Owner</h2>
+          {/* Features */}
+          {property.features.length > 0 && (
+            <section className="detail-page__section">
+              <h2 className="detail-page__section-title">Amenities & Features</h2>
+              <ul className="detail-page__features">
+                {property.features.map((feature) => (
+                  <li key={feature} className="detail-page__feature">
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </div>
+
+        <aside className="detail-page__sidebar">
           <div className="detail-page__contact-card">
+            <h2 className="detail-page__contact-card-title">Contact Owner</h2>
             <p className="detail-page__contact-name">{property.contact.name}</p>
             <p className="detail-page__contact-label">
               {property.contact.isOwner ? 'Property Owner' : 'Agent'} · Verified Listing
@@ -185,7 +186,7 @@ function ListingDetailPage() {
               />
             </div>
           </div>
-        </section>
+        </aside>
       </article>
     </div>
   )

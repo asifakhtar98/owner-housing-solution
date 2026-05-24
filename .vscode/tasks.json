@@ -13,6 +13,20 @@
       },
       "problemMatcher": [],
       "detail": "Build static site and deploy to Firebase Hosting"
+    },
+    {
+      "label": "Local Dev - Generate, Build & Serve",
+      "type": "shell",
+      "command": "npm run prebuild && npm run build && npx serve dist/client -l 3000",
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "detail": "Generate data, build static site, and serve locally on port 3000"
     }
   ]
 }
