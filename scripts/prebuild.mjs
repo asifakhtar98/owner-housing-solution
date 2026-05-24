@@ -17,7 +17,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = join(__dirname, '..')
 const publicDir = join(root, 'public')
 
-const BASE_URL = 'https://ownerhousing.in'
+const BASE_URL = 'https://onrhosn-internal.web.app'
 const DEFAULT_PHONE = '+917002689673'
 const DEFAULT_CONTACT_NAME = 'Owner Housing'
 
@@ -234,7 +234,19 @@ function generateSitemapXml() {
 `
   }
 
-  xml += `</urlset>
+  xml += `  <url>
+    <loc>${BASE_URL}/llms.txt</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>${BASE_URL}/llms-full.txt</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
 `
   return xml
 }
@@ -251,4 +263,4 @@ console.log(`✅ Generated llms-full.txt (${properties.length} listings)`)
 
 const sitemapXml = generateSitemapXml()
 writeFileSync(join(publicDir, 'sitemap.xml'), sitemapXml)
-console.log(`✅ Generated sitemap.xml (${properties.length + 1} URLs)`)
+console.log(`✅ Generated sitemap.xml (${properties.length + 3} URLs)`)

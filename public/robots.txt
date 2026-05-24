@@ -29,4 +29,4 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://ownerhousing.in/sitemap.xml
+Sitemap: https://onrhosn-internal.web.app/sitemap.xml

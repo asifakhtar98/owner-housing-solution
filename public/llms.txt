@@ -8,12 +8,12 @@ Owner Housing connects property seekers directly with property owners across Ass
 
 ## Key Pages
 
-- [Homepage](https://ownerhousing.in/): Browse all property listings with filters for buy/rent, price range, and sorting options
-- [1 BHK Apartment in Lahdoigarh Chariali, Teok, Jorhat](https://ownerhousing.in/listing/1bhk-apartment-lahdoigarh-chariali-teok-jorhat): ₹7,000/mo, 700 sqft, For Rent
-- [Commercial Shop Space in Lahdoigarh Chariali, Teok, Jorhat](https://ownerhousing.in/listing/commercial-shop-rent-lahdoigarh-chariali-teok-jorhat): ₹6,000/mo, 450 sqft, For Rent
-- [Properties in Lahdoigarh Chariali, Teok — Shop, Rent, PG](https://ownerhousing.in/listing/multiple-properties-lahdoigarh-chariali-teok-jorhat): ₹7,000/mo, 800 sqft, For Rent
-- [Properties in Deberapra Mariaini, Jorhat — Rent & Shop](https://ownerhousing.in/listing/multiple-properties-deberapra-mariaini-jorhat): ₹3,500/mo, 600 sqft, For Rent
-- [Properties in Kolakhetra, Moubondha, Jorhat — Shop, Rent, PG](https://ownerhousing.in/listing/multiple-properties-kolakhetra-moubondha-jorhat): ₹8,000/mo, 1000 sqft, For Rent
+- [Homepage](https://onrhosn-internal.web.app/): Browse all property listings with filters for buy/rent, price range, and sorting options
+- [1 BHK Apartment in Lahdoigarh Chariali, Teok, Jorhat](https://onrhosn-internal.web.app/listing/1bhk-apartment-lahdoigarh-chariali-teok-jorhat): ₹7,000/mo, 700 sqft, For Rent
+- [Commercial Shop Space in Lahdoigarh Chariali, Teok, Jorhat](https://onrhosn-internal.web.app/listing/commercial-shop-rent-lahdoigarh-chariali-teok-jorhat): ₹6,000/mo, 450 sqft, For Rent
+- [Properties in Lahdoigarh Chariali, Teok — Shop, Rent, PG](https://onrhosn-internal.web.app/listing/multiple-properties-lahdoigarh-chariali-teok-jorhat): ₹7,000/mo, 800 sqft, For Rent
+- [Properties in Deberapra Mariaini, Jorhat — Rent & Shop](https://onrhosn-internal.web.app/listing/multiple-properties-deberapra-mariaini-jorhat): ₹3,500/mo, 600 sqft, For Rent
+- [Properties in Kolakhetra, Moubondha, Jorhat — Shop, Rent, PG](https://onrhosn-internal.web.app/listing/multiple-properties-kolakhetra-moubondha-jorhat): ₹8,000/mo, 1000 sqft, For Rent
 
 ## Property Types Available
 
@@ -30,4 +30,4 @@ All property owners can be contacted directly via phone or WhatsApp. No broker i
 
 ## Full Content
 
-For complete listing data, see [llms-full.txt](https://ownerhousing.in/llms-full.txt)
+For complete listing data, see [llms-full.txt](https://onrhosn-internal.web.app/llms-full.txt)

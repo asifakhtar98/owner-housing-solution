@@ -1,39 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ownerhousing.in/</loc>
+    <loc>https://onrhosn-internal.web.app/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ownerhousing.in/listing/1bhk-apartment-lahdoigarh-chariali-teok-jorhat</loc>
+    <loc>https://onrhosn-internal.web.app/listing/1bhk-apartment-lahdoigarh-chariali-teok-jorhat</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ownerhousing.in/listing/commercial-shop-rent-lahdoigarh-chariali-teok-jorhat</loc>
+    <loc>https://onrhosn-internal.web.app/listing/commercial-shop-rent-lahdoigarh-chariali-teok-jorhat</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ownerhousing.in/listing/multiple-properties-lahdoigarh-chariali-teok-jorhat</loc>
+    <loc>https://onrhosn-internal.web.app/listing/multiple-properties-lahdoigarh-chariali-teok-jorhat</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ownerhousing.in/listing/multiple-properties-deberapra-mariaini-jorhat</loc>
+    <loc>https://onrhosn-internal.web.app/listing/multiple-properties-deberapra-mariaini-jorhat</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ownerhousing.in/listing/multiple-properties-kolakhetra-moubondha-jorhat</loc>
+    <loc>https://onrhosn-internal.web.app/listing/multiple-properties-kolakhetra-moubondha-jorhat</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://onrhosn-internal.web.app/llms.txt</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://onrhosn-internal.web.app/llms-full.txt</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
