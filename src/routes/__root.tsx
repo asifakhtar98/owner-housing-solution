@@ -64,7 +64,7 @@ function RootComponent() {
       <header className="site-header" role="banner">
         <div className="site-header__inner">
           <Link to="/" className="site-logo" aria-label="Owner Housing - Home">
-            <span className="site-logo__icon" aria-hidden="true">⌂</span>
+            <img src="/logo192.png" alt="Owner Housing" className="site-logo__img" width={36} height={36} />
             <span>
               Owner Housing
               <span className="site-logo__tagline">Direct from Owners</span>
