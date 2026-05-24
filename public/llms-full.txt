@@ -1,0 +1,204 @@
+# Owner Housing — Complete Property Listings
+
+> This file contains the full listing data for Owner Housing, a property listing platform for India. All properties are listed directly by owners — no brokers, no commission. Data is current as of the latest build.
+
+---
+
+## 3 BHK Apartment in Andheri West
+
+- **Price:** ₹1.50 Crore
+- **Category:** For Sale
+- **Type:** Apartment
+- **Area:** 1200 sqft
+- **Configuration:** 3 Bedrooms, 2 Bathrooms
+- **Furnishing:** Semi Furnished
+- **Location:** Andheri West, Mumbai, Maharashtra — 400053
+- **Contact:** Rahul Sharma (Owner) — Phone: +919876543210
+- **Posted:** 2026-05-20
+- **URL:** https://ownerhousing.in/listing/3bhk-apartment-andheri-west-mumbai
+
+Spacious 3BHK apartment on the 12th floor with a beautiful city view. The apartment features a large living room, modular kitchen with chimney, 3 bedrooms with attached wardrobes, 2 modern bathrooms with premium fittings, and a covered car parking spot. Located in a well-maintained society with 24/7 security, gym, swimming pool, and children's play area. Walking distance from Andheri Metro station and DN Nagar. Schools, hospitals, and markets within 1km radius.
+
+**Amenities:** Covered Parking, Gym, Swimming Pool, 24/7 Security, Power Backup, Lift, Children's Play Area
+
+---
+
+## 2 BHK Flat for Rent in Koramangala
+
+- **Price:** ₹35,000/month
+- **Category:** For Rent
+- **Type:** Apartment
+- **Area:** 950 sqft
+- **Configuration:** 2 Bedrooms, 2 Bathrooms
+- **Furnishing:** Fully Furnished
+- **Location:** Koramangala 5th Block, Bangalore, Karnataka — 560095
+- **Contact:** Priya Nair (Owner) — Phone: +919845012345
+- **Posted:** 2026-05-18
+- **URL:** https://ownerhousing.in/listing/2bhk-flat-rent-koramangala-bangalore
+
+Fully furnished 2BHK flat in the heart of Koramangala. Comes with AC in both bedrooms, washing machine, refrigerator, microwave, sofa set, dining table, and beds with mattresses. Gated community with CCTV surveillance, covered parking, and maintained garden. Close to Forum Mall, Jyoti Nivas College, and multiple IT parks. Ideal for working professionals or small families.
+
+**Amenities:** Fully Furnished, AC, Covered Parking, CCTV, Gated Community, Garden
+
+---
+
+## Independent House in Jayanagar
+
+- **Price:** ₹4.50 Crore
+- **Category:** For Sale
+- **Type:** House
+- **Area:** 2400 sqft
+- **Configuration:** 4 Bedrooms, 4 Bathrooms
+- **Furnishing:** Unfurnished
+- **Location:** Jayanagar 4th Block, Bangalore, Karnataka — 560041
+- **Contact:** Venkatesh Murthy (Owner) — Phone: +919901234567
+- **Posted:** 2026-05-15
+- **URL:** https://ownerhousing.in/listing/independent-house-buy-jayanagar-bangalore
+
+Well-built independent house on a 30x40 site in the prestigious Jayanagar 4th Block. Ground + 2 floors with 4 spacious bedrooms, each with attached bathroom. Italian marble flooring, teak wood doors and windows, spacious car porch for 2 cars, and a beautiful terrace garden. Located on a 60-foot wide road with excellent connectivity. Khata A property with clear title. Near Jayanagar Shopping Complex and Metro station.
+
+**Amenities:** Car Porch, Terrace Garden, Italian Marble, Teak Wood, Clear Title, 60ft Road
+
+---
+
+## Luxury Villa for Rent in Whitefield
+
+- **Price:** ₹85,000/month
+- **Category:** For Rent
+- **Type:** Villa
+- **Area:** 3500 sqft
+- **Configuration:** 4 Bedrooms, 5 Bathrooms
+- **Furnishing:** Fully Furnished
+- **Location:** Whitefield, Bangalore, Karnataka — 560066
+- **Contact:** Arun Krishnan (Owner) — Phone: +919880056789
+- **Posted:** 2026-05-22
+- **URL:** https://ownerhousing.in/listing/villa-rent-whitefield-bangalore
+
+Premium fully furnished villa in a gated villa community in Whitefield. Features include private garden, jacuzzi, home theatre room, modular kitchen with all appliances, servant quarters, and 2-car garage. The villa community offers a clubhouse, tennis court, cricket pitch, and Olympic-size swimming pool. 5 minutes from ITPL and Phoenix Marketcity. Perfect for expat families or senior executives.
+
+**Amenities:** Private Garden, Jacuzzi, Home Theatre, Servant Quarters, Clubhouse, Tennis Court, Swimming Pool
+
+---
+
+## Residential Plot in Electronic City
+
+- **Price:** ₹85 Lakh
+- **Category:** For Sale
+- **Type:** Plot
+- **Area:** 1200 sqft
+- **Furnishing:** Not applicable
+- **Location:** Electronic City Phase 2, Bangalore, Karnataka — 560100
+- **Contact:** Suresh Reddy (Owner) — Phone: +919945678901
+- **Posted:** 2026-05-10
+- **URL:** https://ownerhousing.in/listing/residential-plot-electronic-city-bangalore
+
+BMRDA approved residential plot in a well-developed layout near Electronic City Phase 2. All amenities like underground drainage, wide tar roads, streetlights, water supply, and electricity connection are already in place. Near Infosys and Wipro campuses. Schools, hospitals, and supermarkets within 2km. Excellent investment opportunity with high appreciation potential. Clear title with all legal documents ready.
+
+**Amenities:** BMRDA Approved, Clear Title, Tar Roads, Underground Drainage, Water Supply, Electricity
+
+---
+
+## Commercial Office Space in BKC
+
+- **Price:** ₹2,50,000/month
+- **Category:** For Rent
+- **Type:** Office
+- **Area:** 2000 sqft
+- **Configuration:** 2 Bathrooms
+- **Furnishing:** Semi Furnished
+- **Location:** Bandra Kurla Complex, Mumbai, Maharashtra — 400051
+- **Contact:** Deepak Joshi (Owner) — Phone: +919821234567
+- **Posted:** 2026-05-19
+- **URL:** https://ownerhousing.in/listing/office-space-bkc-mumbai
+
+Premium Grade A office space in Bandra Kurla Complex, Mumbai's premier business district. The space features a large open floor plan suitable for 40-50 workstations, 2 conference rooms, a pantry area, and 2 washrooms. Building amenities include high-speed lifts, central AC, DG backup, ample visitor parking, and a cafeteria. Close to BKC Metro station and major banks. Ideal for MNCs, financial services, and consulting firms.
+
+**Amenities:** Grade A Building, Central AC, DG Backup, Conference Rooms, Cafeteria, Visitor Parking, High-speed Lifts
+
+---
+
+## 1 BHK Apartment in Powai
+
+- **Price:** ₹95 Lakh
+- **Category:** For Sale
+- **Type:** Apartment
+- **Area:** 650 sqft
+- **Configuration:** 1 Bedrooms, 1 Bathrooms
+- **Furnishing:** Semi Furnished
+- **Location:** Powai, Mumbai, Maharashtra — 400076
+- **Contact:** Meera Patel (Owner) — Phone: +919867890123
+- **Posted:** 2026-05-21
+- **URL:** https://ownerhousing.in/listing/1bhk-apartment-buy-powai-mumbai
+
+Compact yet well-designed 1BHK in a reputed society in Powai. Features include a spacious bedroom with wardrobe, modern bathroom with hot water, modular kitchen with exhaust, and a small balcony with lake view. Society amenities include gym, jogging track, and 24/7 security. Near IIT Bombay, Hiranandani Gardens, and multiple IT parks. Excellent for young professionals and newly married couples.
+
+**Amenities:** Lake View, Modular Kitchen, Gym, Jogging Track, 24/7 Security, Balcony
+
+---
+
+## PG Accommodation in HSR Layout
+
+- **Price:** ₹12,000/month
+- **Category:** For Rent
+- **Type:** Pg
+- **Area:** 200 sqft
+- **Configuration:** 1 Bedrooms, 1 Bathrooms
+- **Furnishing:** Fully Furnished
+- **Location:** HSR Layout Sector 2, Bangalore, Karnataka — 560102
+- **Contact:** Lakshmi Devi (Owner) — Phone: +919611234567
+- **Posted:** 2026-05-23
+- **URL:** https://ownerhousing.in/listing/pg-accommodation-hsr-layout-bangalore
+
+Well-maintained PG accommodation for working professionals in HSR Layout. Single and double sharing rooms available. Includes bed, wardrobe, study table, AC, Wi-Fi, daily housekeeping, and laundry service. Meals included (breakfast + dinner). Common areas include a lounge, terrace, and washing machine access. 10 minutes walk from HSR BDA Complex and multiple bus stops. Near major IT companies in Outer Ring Road.
+
+**Amenities:** Meals Included, Wi-Fi, AC, Housekeeping, Laundry, Lounge Area
+
+---
+
+## Shop Space in Connaught Place
+
+- **Price:** ₹7.50 Crore
+- **Category:** For Sale
+- **Type:** Shop
+- **Area:** 800 sqft
+- **Configuration:** 1 Bathrooms
+- **Furnishing:** Unfurnished
+- **Location:** Connaught Place, Delhi, Delhi — 110001
+- **Contact:** Rajiv Malhotra (Owner) — Phone: +919811223344
+- **Posted:** 2026-05-12
+- **URL:** https://ownerhousing.in/listing/shop-space-buy-connaught-place-delhi
+
+Prime commercial shop space on the ground floor in Connaught Place, Delhi's iconic business and shopping hub. The shop has an excellent frontage of 20 feet on the main corridor with high footfall. Suitable for retail showroom, restaurant, brand outlet, or banking. Freehold property with clear title. Near Rajiv Chowk Metro station (largest metro interchange in Delhi). One of the highest-return commercial properties in North India.
+
+**Amenities:** Ground Floor, Main Corridor, High Footfall, Freehold, Clear Title, Near Metro
+
+---
+
+## 2 BHK Apartment for Rent in Adyar
+
+- **Price:** ₹22,000/month
+- **Category:** For Rent
+- **Type:** Apartment
+- **Area:** 1000 sqft
+- **Configuration:** 2 Bedrooms, 2 Bathrooms
+- **Furnishing:** Semi Furnished
+- **Location:** Adyar, Chennai, Tamil Nadu — 600020
+- **Contact:** Sundaram Iyer (Owner) — Phone: +919840123456
+- **Posted:** 2026-05-17
+- **URL:** https://ownerhousing.in/listing/2bhk-apartment-rent-adyar-chennai
+
+Well-ventilated 2BHK apartment on the 3rd floor in a quiet residential area of Adyar. The flat has cross-ventilation, vitrified tile flooring, modular kitchen with granite platform, and both bedrooms with attached bathrooms. Geyser and fan in all rooms included. Near Adyar bus depot, IIT Madras, and Elliot's Beach. Close to schools like PSBB and Vidya Mandir. Ideal for families and students.
+
+**Amenities:** Cross Ventilation, Vitrified Tiles, Modular Kitchen, Geyser, Near Bus Depot, Quiet Area
+
+---
+
+## Summary
+
+- **Total Listings:** 10
+- **Cities:** Mumbai, Bangalore, Delhi, Chennai
+- **For Sale:** 5 properties
+- **For Rent:** 5 properties
+- **Property Types:** apartment, house, villa, plot, office, pg, shop
+
+All owners can be contacted directly via phone or WhatsApp. No broker commission is charged on any listing.

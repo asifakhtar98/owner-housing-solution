@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "GOD Execute - Generate, Build, Deploy",
+      "type": "shell",
+      "command": "npm run deploy",
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "detail": "Build static site and deploy to Firebase Hosting"
+    }
+  ]
+}

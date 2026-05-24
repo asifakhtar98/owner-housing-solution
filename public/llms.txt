@@ -1,0 +1,43 @@
+# Owner Housing
+
+> Owner Housing is a property listing platform for India where buyers and renters can find verified properties directly from owners — no brokers, no commission. Browse apartments, houses, villas, plots, PG accommodations, and commercial spaces across Mumbai, Bangalore, Chennai, Delhi, and more.
+
+## About
+
+Owner Housing connects property seekers directly with property owners across India. All listings are verified and posted by owners themselves. The platform covers both residential and commercial properties for sale and rent, with prices in Indian Rupees (INR) formatted in lakhs and crores.
+
+## Key Pages
+
+- [Homepage](https://ownerhousing.in/): Browse all property listings with filters for buy/rent, price range, and sorting options
+- [3 BHK Apartment in Andheri West, Mumbai](https://ownerhousing.in/listing/3bhk-apartment-andheri-west-mumbai): ₹1.5 Cr, 1200 sqft, For Sale
+- [2 BHK Flat for Rent in Koramangala, Bangalore](https://ownerhousing.in/listing/2bhk-flat-rent-koramangala-bangalore): ₹35,000/mo, 950 sqft, Fully Furnished
+- [Independent House in Jayanagar, Bangalore](https://ownerhousing.in/listing/independent-house-buy-jayanagar-bangalore): ₹4.5 Cr, 2400 sqft, For Sale
+- [Luxury Villa for Rent in Whitefield, Bangalore](https://ownerhousing.in/listing/villa-rent-whitefield-bangalore): ₹85,000/mo, 3500 sqft, Fully Furnished
+- [Residential Plot in Electronic City, Bangalore](https://ownerhousing.in/listing/residential-plot-electronic-city-bangalore): ₹85 L, 1200 sqft, For Sale
+- [Commercial Office Space in BKC, Mumbai](https://ownerhousing.in/listing/office-space-bkc-mumbai): ₹2,50,000/mo, 2000 sqft, For Rent
+- [1 BHK Apartment in Powai, Mumbai](https://ownerhousing.in/listing/1bhk-apartment-buy-powai-mumbai): ₹95 L, 650 sqft, For Sale
+- [PG Accommodation in HSR Layout, Bangalore](https://ownerhousing.in/listing/pg-accommodation-hsr-layout-bangalore): ₹12,000/mo, Meals Included
+- [Shop Space in Connaught Place, Delhi](https://ownerhousing.in/listing/shop-space-buy-connaught-place-delhi): ₹7.5 Cr, 800 sqft, Freehold
+- [2 BHK Apartment for Rent in Adyar, Chennai](https://ownerhousing.in/listing/2bhk-apartment-rent-adyar-chennai): ₹22,000/mo, 1000 sqft
+
+## Property Types Available
+
+- Apartments (1BHK, 2BHK, 3BHK)
+- Independent Houses
+- Villas
+- Plots / Land
+- PG Accommodations
+- Commercial Office Spaces
+- Shops / Retail Spaces
+
+## Cities Covered
+
+Mumbai, Bangalore, Chennai, Delhi
+
+## Contact
+
+All property owners can be contacted directly via phone or WhatsApp. No broker involvement, no commission charged.
+
+## Full Content
+
+For complete listing data, see [llms-full.txt](https://ownerhousing.in/llms-full.txt)
