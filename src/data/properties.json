@@ -1,76 +1,50 @@
 [
   {
     "id": "prop-001",
-    "slug": "3bhk-apartment-buy-sixmile-guwahati",
-    "title": "3 BHK Apartment in Six Mile, Guwahati",
+    "slug": "1bhk-apartment-lahdoigarh-chariali-teok-jorhat",
+    "title": "1 BHK Apartment in Lahdoigarh Chariali, Teok, Jorhat",
     "type": "apartment",
-    "category": "buy",
-    "price": 7500000,
-    "priceUnit": "total",
-    "area": 1350,
+    "category": "rent",
+    "price": 7000,
+    "priceUnit": "monthly",
+    "area": 700,
     "areaUnit": "sqft",
-    "bedrooms": 3,
-    "bathrooms": 2,
+    "bedrooms": 1,
+    "bathrooms": 1,
     "furnishing": "semi-furnished",
     "location": {
-      "city": "Guwahati",
-      "locality": "Six Mile",
+      "city": "Jorhat",
+      "locality": "Lahdoigarh Chariali",
       "state": "Assam",
-      "pincode": "781022",
-      "lat": 26.1275,
-      "lng": 91.8023
+      "pincode": "785112",
+      "lat": 26.7509,
+      "lng": 94.2037
     },
-    "description": "Spacious 3BHK apartment on the 6th floor of a RERA-registered project in Six Mile, Guwahati. Features include a large drawing-cum-dining hall, modular kitchen with exhaust, 3 well-sized bedrooms with built-in wardrobes, 2 modern bathrooms with premium CP fittings, and a balcony overlooking the Brahmaputra river valley. Society amenities include earthquake-resistant RCC structure, 24/7 security with CCTV, backup generator, rainwater harvesting, children's play area, and covered two-wheeler parking. Walking distance to Lokpriya Gopinath Bordoloi International Airport road and GS Road. Schools like Don Bosco and Sarala Birla are within 3km.",
-    "features": ["River View", "Earthquake Resistant", "RERA Registered", "Covered Parking", "Rainwater Harvesting", "24/7 Security", "Children's Play Area"],
-    "images": ["https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=500&fit=crop"],
+    "description": "Spacious 1BHK apartment in Lahdoigarh Chariali, Teok, Jorhat. Features include a large drawing-cum-dining hall, modular kitchen with exhaust, 1 well-sized bedroom with built-in wardrobes, 1 modern bathroom with premium CP fittings, and a balcony overlooking the Brahmaputra river valley. Society amenities include earthquake-resistant RCC structure, 24/7 security with CCTV, backup generator, rainwater harvesting, children's play area, and covered two-wheeler parking. Walking distance to Lokpriya Gopinath Bordoloi International Airport road and GS Road. Schools like Don Bosco and Sarala Birla are within 3km.",
+    "features": [
+      "Near by Highway",
+      "Near by NH 37",
+      "Parking",
+      "24/7 Security",
+      "Children's Play Area"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=500&fit=crop"
+    ],
     "contact": {
-      "name": "Bikash Baruah",
+      "name": "G. Ahmed",
       "isOwner": true
     },
     "postedDate": "2026-05-22",
     "featured": true
   },
-
-  {
-    "id": "prop-02",
-    "slug": "multi-property-sixmile-guwahati-rent-pg-sale",
-    "title": "Multiple Properties in Six Mile — Rent, PG & Sale",
-    "type": "apartment",
-    "category": "rent",
-    "price": 7500,
-    "priceUnit": "monthly",
-    "area": 3500,
-    "areaUnit": "sqft",
-    "bedrooms": 6,
-    "bathrooms": 4,
-    "furnishing": "semi-furnished",
-    "location": {
-      "city": "Guwahati",
-      "locality": "Six Mile",
-      "state": "Assam",
-      "pincode": "781022",
-      "lat": 26.1275,
-      "lng": 91.8023
-    },
-    "description": "Owner with multiple properties available in Six Mile, Guwahati — one of the city's fastest-developing residential corridors near LGBI Airport road.\n\n🏠 FOR RENT — 2BHK Fully Furnished Flat (₹18,000/month): Spacious 900 sqft apartment on the 3rd floor with split AC in both bedrooms, modular kitchen with chimney, double-door refrigerator, washing machine, and high-speed Wi-Fi. Gated complex with lift, 24/7 security, power backup, and covered two-wheeler parking. Ideal for IT professionals and small families. Water charges included.\n\n🛏️ PG ACCOMMODATION — Working Professionals (₹7,500/month): Comfortable single and double sharing PG rooms with attached bathroom and geyser. Furnished with bed, wardrobe, study table, and fan. Common amenities include RO drinking water, home-cooked meals (veg & non-veg), laundry service, CCTV security, and rooftop sitting area. Walking distance to GS Road offices (TCS, Wipro). Ideal for bachelor working professionals and students.\n\n📐 PLOT FOR SALE — GMDA Approved Residential Plot (₹35,00,000): 3 katha (2,160 sqft) GMDA-approved residential plot on a 20-foot concrete road. Flat topography, ready for immediate construction. Electricity and municipal water available at site. 2km from LGBI Airport, near Lokhra industrial area and IIT Guwahati. All documents (dag, patta, NOC) in order. Excellent investment as Six Mile is rapidly developing with planned flyover and metro rail.\n\nAll properties are directly from the owner — no brokers, no commission. Contact for site visit and negotiation.",
-    "features": ["Direct Owner", "Multiple Properties", "Near Airport", "Gated Complex", "GMDA Approved Plot", "PG with Meals", "Wi-Fi", "24/7 Security", "Power Backup", "Furnished Options"],
-    "images": ["https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=500&fit=crop"],
-    "contact": {
-      "name": "Bikash Baruah",
-      "isOwner": true
-    },
-    "postedDate": "2026-05-24",
-    "featured": true,
-    "offerings": ["rent", "pg", "buy", "shop"]
-  },
-
   {
     "id": "prop-003",
-    "slug": "commercial-shop-rent-sixmile-guwahati",
-    "title": "Commercial Shop Space in Six Mile, Guwahati",
+    "slug": "commercial-shop-rent-lahdoigarh-chariali-teok-jorhat",
+    "title": "Commercial Shop Space in Lahdoigarh Chariali, Teok, Jorhat",
     "type": "shop",
     "category": "rent",
-    "price": 25000,
+    "price": 6000,
     "priceUnit": "monthly",
     "area": 450,
     "areaUnit": "sqft",
@@ -78,22 +52,161 @@
     "bathrooms": 1,
     "furnishing": "unfurnished",
     "location": {
-      "city": "Guwahati",
-      "locality": "Six Mile",
+      "city": "Jorhat",
+      "locality": "Lahdoigarh Chariali",
       "state": "Assam",
-      "pincode": "781022",
+      "pincode": "785700",
       "lat": 26.1275,
       "lng": 91.8023
     },
-    "description": "Prime ground-floor commercial shop available for rent on the main Six Mile road, Guwahati. 450 sqft carpet area with 12-foot ceiling height, glass frontage with roller shutter, and attached washroom. Ideal for retail, pharmacy, salon, mobile shop, or small office. Separate electric meter and water connection. High footfall location near Six Mile Flyover, with ample roadside parking. Previously operated as a garment store. Available for immediate possession with 11-month renewable lease. No brokerage — deal directly with the owner.",
-    "features": ["Ground Floor", "Glass Frontage", "Main Road", "High Footfall", "Separate Meter", "Attached Washroom", "Roller Shutter"],
-    "images": ["https://images.unsplash.com/photo-1582037928769-181f2644ecb7?w=800&h=500&fit=crop"],
+    "description": "Prime ground-floor commercial shop available for rent on the main Lahdoigarh Chariali road, Jorhat. 450 sqft carpet area with 12-foot ceiling height, glass frontage with roller shutter, and attached washroom. Ideal for retail, pharmacy, salon, mobile shop, or small office. Separate electric meter and water connection. High footfall location near Six Mile Flyover, with ample roadside parking. Previously operated as a garment store. Available for immediate possession with 11-month renewable lease. No brokerage — deal directly with the owner.",
+    "features": [
+      "Ground Floor",
+      "Main Road",
+      "High Footfall",
+      "Separate Meter"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1582037928769-181f2644ecb7?w=800&h=500&fit=crop"
+    ],
     "contact": {
-      "name": "Bikash Baruah",
+      "name": "G. Ahmed",
       "isOwner": true
     },
     "postedDate": "2026-05-24",
     "featured": false,
-    "offerings": ["shop"]
+    "offerings": [
+      "shop"
+    ]
+  },
+  {
+    "id": "prop-004",
+    "slug": "multiple-properties-lahdoigarh-chariali-teok-jorhat",
+    "title": "Properties in Lahdoigarh Chariali, Teok — Shop, Rent, PG",
+    "type": "apartment",
+    "category": "rent",
+    "price": 7000,
+    "priceUnit": "monthly",
+    "area": 800,
+    "areaUnit": "sqft",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "furnishing": "semi-furnished",
+    "location": {
+      "city": "Teok, Jorhat",
+      "locality": "Lahdoigarh Chariali",
+      "state": "Assam",
+      "pincode": "785700",
+      "lat": 26.7509,
+      "lng": 94.2037
+    },
+    "description": "Multiple properties available in Lahdoigarh Chariali, Teok Jorhat. Direct from owner G. Ahmed. Available options include commercial shops, residential rent, and PG accommodations.",
+    "features": [
+      "Direct Owner",
+      "Multiple Properties",
+      "Shop",
+      "Rent",
+      "PG"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=500&fit=crop"
+    ],
+    "contact": {
+      "name": "G. Ahmed",
+      "phone": "+9119954911253",
+      "alternatePhone": "+917002689673",
+      "isOwner": true
+    },
+    "postedDate": "2026-05-24",
+    "featured": true,
+    "offerings": [
+      "shop",
+      "rent",
+      "pg"
+    ]
+  },
+  {
+    "id": "prop-005",
+    "slug": "multiple-properties-deberapra-mariaini-jorhat",
+    "title": "Properties in Deberapra Mariaini, Jorhat — Rent & Shop",
+    "type": "apartment",
+    "category": "rent",
+    "price": 3500,
+    "priceUnit": "monthly",
+    "area": 600,
+    "areaUnit": "sqft",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "furnishing": "semi-furnished",
+    "location": {
+      "city": "Mariani, Jorhat",
+      "locality": "Deberapra",
+      "state": "Assam",
+      "pincode": "785635",
+      "lat": 26.6703,
+      "lng": 94.3253
+    },
+    "description": "Multiple properties available in Deberapra Mariaini, Jorhat. Direct from owner G. Ahmed. Available options include residential rent and commercial shops.",
+    "features": [
+      "Direct Owner",
+      "Multiple Properties",
+      "Rent"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1582037928769-181f2644ecb7?w=800&h=500&fit=crop"
+    ],
+    "contact": {
+      "name": "G. Ahmed",
+      "isOwner": true
+    },
+    "postedDate": "2026-05-24",
+    "featured": true,
+    "offerings": [
+      "rent"
+    ]
+  },
+  {
+    "id": "prop-006",
+    "slug": "multiple-properties-kolakhetra-moubondha-jorhat",
+    "title": "Properties in Kolakhetra, Moubondha, Jorhat — Shop, Rent, PG",
+    "type": "apartment",
+    "category": "rent",
+    "price": 8000,
+    "priceUnit": "monthly",
+    "area": 1000,
+    "areaUnit": "sqft",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "furnishing": "semi-furnished",
+    "location": {
+      "city": "Jorhat",
+      "locality": "Kolakhetra, Moubondha",
+      "state": "Assam",
+      "pincode": "785001",
+      "lat": 26.7509,
+      "lng": 94.2037
+    },
+    "description": "Multiple properties available in Kolakhetra, Moubondha, Jorhat. Direct from owner G. Ahmed. Available options include commercial shops, residential rent, and PG accommodations.",
+    "features": [
+      "Direct Owner",
+      "Multiple Properties",
+      "Shop",
+      "Rent",
+      "PG"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=500&fit=crop"
+    ],
+    "contact": {
+      "name": "G. Ahmed",
+      "isOwner": true
+    },
+    "postedDate": "2026-05-24",
+    "featured": true,
+    "offerings": [
+      "shop",
+      "rent",
+      "pg"
+    ]
   }
 ]
