@@ -1,38 +1,43 @@
 # Owner Housing
 
-> Owner Housing is a property listing platform for India where buyers and renters can find verified properties directly from owners — no brokers, no commission. Browse apartments, houses, villas, plots, PG accommodations, and commercial spaces across Mumbai, Bangalore, Delhi, Chennai, and more.
+> Owner Housing is a property listing platform for India where buyers and renters can find verified properties directly from owners — no brokers, no commission. Browse apartments, houses, villas, plots, PG accommodations, and commercial spaces across Guwahati, Jorhat, Dibrugarh, Silchar, Tezpur, Nagaon, and more.
 
 ## About
 
-Owner Housing connects property seekers directly with property owners across India. All listings are verified and posted by owners themselves. The platform covers both residential and commercial properties for sale and rent, with prices in Indian Rupees (INR) formatted in lakhs and crores.
+Owner Housing connects property seekers directly with property owners across Assam. All listings are verified and posted by owners themselves. The platform covers both residential and commercial properties for sale and rent, with prices in Indian Rupees (INR) formatted in lakhs and crores.
 
 ## Key Pages
 
 - [Homepage](https://ownerhousing.in/): Browse all property listings with filters for buy/rent, price range, and sorting options
-- [3 BHK Apartment in Andheri West](https://ownerhousing.in/listing/3bhk-apartment-andheri-west-mumbai): ₹1.50 Cr, 1200 sqft, For Sale
-- [2 BHK Flat for Rent in Koramangala](https://ownerhousing.in/listing/2bhk-flat-rent-koramangala-bangalore): ₹35,000/mo, 950 sqft, For Rent, Fully Furnished
-- [Independent House in Jayanagar](https://ownerhousing.in/listing/independent-house-buy-jayanagar-bangalore): ₹4.50 Cr, 2400 sqft, For Sale
-- [Luxury Villa for Rent in Whitefield](https://ownerhousing.in/listing/villa-rent-whitefield-bangalore): ₹85,000/mo, 3500 sqft, For Rent, Fully Furnished
-- [Residential Plot in Electronic City](https://ownerhousing.in/listing/residential-plot-electronic-city-bangalore): ₹85 L, 1200 sqft, For Sale
-- [Commercial Office Space in BKC](https://ownerhousing.in/listing/office-space-bkc-mumbai): ₹2,50,000/mo, 2000 sqft, For Rent
-- [1 BHK Apartment in Powai](https://ownerhousing.in/listing/1bhk-apartment-buy-powai-mumbai): ₹95 L, 650 sqft, For Sale
-- [PG Accommodation in HSR Layout](https://ownerhousing.in/listing/pg-accommodation-hsr-layout-bangalore): ₹12,000/mo, 200 sqft, For Rent, Fully Furnished, Meals Included
-- [Shop Space in Connaught Place](https://ownerhousing.in/listing/shop-space-buy-connaught-place-delhi): ₹7.50 Cr, 800 sqft, For Sale, Freehold
-- [2 BHK Apartment for Rent in Adyar](https://ownerhousing.in/listing/2bhk-apartment-rent-adyar-chennai): ₹22,000/mo, 1000 sqft, For Rent
+- [3 BHK Apartment in Six Mile, Guwahati](https://ownerhousing.in/listing/3bhk-apartment-buy-sixmile-guwahati): ₹75 L, 1350 sqft, For Sale
+- [2 BHK Flat for Rent in Zoo Road](https://ownerhousing.in/listing/2bhk-flat-rent-zoo-road-guwahati): ₹18,000/mo, 900 sqft, For Rent, Fully Furnished
+- [Independent House in Chandmari, Guwahati](https://ownerhousing.in/listing/independent-house-buy-chandmari-guwahati): ₹1.85 Cr, 2200 sqft, For Sale
+- [Residential Plot near Airport, Azara](https://ownerhousing.in/listing/residential-plot-buy-azara-guwahati): ₹35 L, 2160 sqft, For Sale
+- [PG for Working Professionals in Christian Basti](https://ownerhousing.in/listing/pg-accommodation-rent-christian-basti-guwahati): ₹7,500/mo, 150 sqft, For Rent, Fully Furnished
+- [Commercial Office Space on GS Road](https://ownerhousing.in/listing/office-space-rent-gs-road-guwahati): ₹45,000/mo, 1100 sqft, For Rent
+- [Shop Space in Fancy Bazaar](https://ownerhousing.in/listing/shop-space-buy-fancy-bazaar-guwahati): ₹1.20 Cr, 450 sqft, For Sale, Freehold
+- [2 BHK Apartment in AT Road, Jorhat](https://ownerhousing.in/listing/2bhk-apartment-buy-at-road-jorhat): ₹38 L, 850 sqft, For Sale
+- [Independent House for Rent in Dibrugarh](https://ownerhousing.in/listing/independent-house-rent-graham-bazaar-dibrugarh): ₹15,000/mo, 1400 sqft, For Rent
+- [Luxury Villa in Beltola, Guwahati](https://ownerhousing.in/listing/villa-buy-beltola-guwahati): ₹3.20 Cr, 3200 sqft, For Sale
+- [1 BHK Flat for Rent in Silchar](https://ownerhousing.in/listing/1bhk-flat-rent-silchar-town): ₹8,000/mo, 550 sqft, For Rent
+- [Residential Plot in Tezpur](https://ownerhousing.in/listing/residential-plot-buy-tezpur-town): ₹18 L, 1440 sqft, For Sale
+- [3 BHK Apartment for Rent in Narengi](https://ownerhousing.in/listing/3bhk-apartment-rent-narengi-guwahati): ₹25,000/mo, 1250 sqft, For Rent
+- [Independent House in Nagaon Town](https://ownerhousing.in/listing/independent-house-buy-nagaon-town): ₹55 L, 1600 sqft, For Sale
+- [2 BHK Flat in Paltan Bazaar, Guwahati](https://ownerhousing.in/listing/2bhk-flat-buy-paltan-bazaar-guwahati): ₹52 L, 780 sqft, For Sale
 
 ## Property Types Available
 
 - Apartments (1BHK, 2BHK, 3BHK)
 - Independent Houses
-- Villas
 - Plots / Land
-- Commercial Office Spaces
 - PG Accommodations
+- Commercial Office Spaces
 - Shops / Retail Spaces
+- Villas
 
 ## Cities Covered
 
-Mumbai, Bangalore, Delhi, Chennai
+Guwahati, Jorhat, Dibrugarh, Silchar, Tezpur, Nagaon
 
 ## Contact
 

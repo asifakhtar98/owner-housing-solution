@@ -13,11 +13,11 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'Owner Housing — Buy & Rent Properties Directly from Owners in India' },
+      { title: 'Owner Housing — Buy & Rent Properties Directly from Owners in Assam' },
       {
         name: 'description',
         content:
-          'Find verified properties directly from owners across India. No brokers, no commission. Buy or rent apartments, houses, villas, plots, and more.',
+          'Find verified properties directly from owners across Assam. No brokers, no commission. Buy or rent apartments, houses, villas, plots, and more in Guwahati, Jorhat, Dibrugarh, Silchar, Tezpur, and Nagaon.',
       },
       { property: 'og:site_name', content: 'Owner Housing' },
       { name: 'theme-color', content: '#00796B' },

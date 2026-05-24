@@ -1,7 +1,13 @@
 /**
- * Generates llms.txt and llms-full.txt from properties.json
- * Run: node scripts/generate-llms-full.mjs
- * Auto-run: added to the prebuild script in package.json
+ * Pre-build script: generates SEO & AI-discoverability files from properties.json
+ *
+ * Outputs (all written to public/):
+ *   - llms.txt        — summary for AI crawlers
+ *   - llms-full.txt   — full listing data for AI crawlers
+ *   - sitemap.xml     — XML sitemap for search engines
+ *
+ * Run: node scripts/prebuild.mjs
+ * Auto-run: wired as the "prebuild" npm script in package.json
  */
 import { readFileSync, writeFileSync } from 'fs'
 import { join, dirname } from 'path'
@@ -9,10 +15,15 @@ import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = join(__dirname, '..')
+const publicDir = join(root, 'public')
+
+const BASE_URL = 'https://ownerhousing.in'
 
 const properties = JSON.parse(
   readFileSync(join(root, 'src/data/properties.json'), 'utf-8')
 )
+
+// ── Helpers ──────────────────────────────────────────────────────────────
 
 function formatPriceText(price, priceUnit) {
   if (priceUnit === 'monthly') {
@@ -44,7 +55,7 @@ function formatPriceShort(price, priceUnit) {
   return `₹${price.toLocaleString('en-IN')}`
 }
 
-// --- Generate llms.txt (summary) ---
+// ── llms.txt (summary) ──────────────────────────────────────────────────
 
 function generateLlmsTxt() {
   const cities = [...new Set(properties.map(p => p.location.city))]
@@ -66,11 +77,11 @@ function generateLlmsTxt() {
 
 ## About
 
-Owner Housing connects property seekers directly with property owners across India. All listings are verified and posted by owners themselves. The platform covers both residential and commercial properties for sale and rent, with prices in Indian Rupees (INR) formatted in lakhs and crores.
+Owner Housing connects property seekers directly with property owners across Assam. All listings are verified and posted by owners themselves. The platform covers both residential and commercial properties for sale and rent, with prices in Indian Rupees (INR) formatted in lakhs and crores.
 
 ## Key Pages
 
-- [Homepage](https://ownerhousing.in/): Browse all property listings with filters for buy/rent, price range, and sorting options
+- [Homepage](${BASE_URL}/): Browse all property listings with filters for buy/rent, price range, and sorting options
 `
 
   for (const p of properties) {
@@ -83,7 +94,7 @@ Owner Housing connects property seekers directly with property owners across Ind
     if (p.type === 'pg' && p.features.includes('Meals Included')) extras.push('Meals Included')
     if (p.type === 'shop' && p.features.includes('Freehold')) extras.push('Freehold')
 
-    output += `- [${p.title}](https://ownerhousing.in/listing/${p.slug}): ${priceShort}, ${extras.join(', ')}\n`
+    output += `- [${p.title}](${BASE_URL}/listing/${p.slug}): ${priceShort}, ${extras.join(', ')}\n`
   }
 
   output += `
@@ -105,13 +116,13 @@ All property owners can be contacted directly via phone or WhatsApp. No broker i
 
 ## Full Content
 
-For complete listing data, see [llms-full.txt](https://ownerhousing.in/llms-full.txt)
+For complete listing data, see [llms-full.txt](${BASE_URL}/llms-full.txt)
 `
 
   return output
 }
 
-// --- Generate llms-full.txt (detailed) ---
+// ── llms-full.txt (detailed) ────────────────────────────────────────────
 
 function generateLlmsFullTxt() {
   let output = `# Owner Housing — Complete Property Listings
@@ -139,7 +150,7 @@ ${bedBath.length > 0 ? `- **Configuration:** ${bedBath.join(', ')}\n` : ''}- **F
 - **Location:** ${p.location.locality}, ${p.location.city}, ${p.location.state} — ${p.location.pincode}
 - **Contact:** ${p.contact.name} (${p.contact.isOwner ? 'Owner' : 'Agent'}) — Phone: ${p.contact.phone}
 - **Posted:** ${p.postedDate}
-- **URL:** https://ownerhousing.in/listing/${p.slug}
+- **URL:** ${BASE_URL}/listing/${p.slug}
 
 ${p.description}
 
@@ -165,12 +176,46 @@ All owners can be contacted directly via phone or WhatsApp. No broker commission
   return output
 }
 
-// --- Write both files ---
+// ── sitemap.xml ─────────────────────────────────────────────────────────
+
+function generateSitemapXml() {
+  const today = new Date().toISOString().split('T')[0]
+
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${BASE_URL}/</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+`
+
+  for (const p of properties) {
+    xml += `  <url>
+    <loc>${BASE_URL}/listing/${p.slug}</loc>
+    <lastmod>${p.postedDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+`
+  }
+
+  xml += `</urlset>
+`
+  return xml
+}
+
+// ── Write all files ─────────────────────────────────────────────────────
 
 const llmsTxt = generateLlmsTxt()
-writeFileSync(join(root, 'public/llms.txt'), llmsTxt)
+writeFileSync(join(publicDir, 'llms.txt'), llmsTxt)
 console.log(`✅ Generated llms.txt (${properties.length} listings)`)
 
 const llmsFullTxt = generateLlmsFullTxt()
-writeFileSync(join(root, 'public/llms-full.txt'), llmsFullTxt)
+writeFileSync(join(publicDir, 'llms-full.txt'), llmsFullTxt)
 console.log(`✅ Generated llms-full.txt (${properties.length} listings)`)
+
+const sitemapXml = generateSitemapXml()
+writeFileSync(join(publicDir, 'sitemap.xml'), sitemapXml)
+console.log(`✅ Generated sitemap.xml (${properties.length + 1} URLs)`)

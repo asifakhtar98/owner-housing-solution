@@ -83,7 +83,7 @@ function HomePage() {
           <span className="hero__title-accent">Direct from Owners</span>
         </h1>
         <p className="hero__subtitle">
-          No brokers. No commission. Browse verified property listings across India.
+          No brokers. No commission. Browse verified property listings across Assam.
         </p>
       </section>
 

@@ -66,7 +66,7 @@ export function generateWebsiteJsonLd(): object {
     '@type': 'WebSite',
     name: 'Owner Housing',
     url: BASE_URL,
-    description: 'Buy & rent properties directly from owners in India. No brokers, no commission.',
+    description: 'Buy & rent properties directly from owners in Assam. No brokers, no commission. Listings in Guwahati, Jorhat, Dibrugarh, Silchar, Tezpur, and Nagaon.',
     potentialAction: {
       '@type': 'SearchAction',
       target: `${BASE_URL}/?q={search_term_string}`,
@@ -127,25 +127,25 @@ export function generateListingMeta(property: Property) {
  */
 export function generateHomeMeta() {
   return [
-    { title: 'Owner Housing — Buy & Rent Properties Directly from Owners in India' },
+    { title: 'Owner Housing — Buy & Rent Properties Directly from Owners in Assam' },
     {
       name: 'description',
       content:
-        'Find verified properties directly from owners across India. No brokers, no commission. Buy or rent apartments, houses, villas, plots, commercial spaces, and PG accommodations.',
+        'Find verified properties directly from owners across Assam. No brokers, no commission. Buy or rent apartments, houses, villas, plots, commercial spaces, and PG accommodations in Guwahati, Jorhat, Dibrugarh, Silchar, Tezpur, and Nagaon.',
     },
-    { property: 'og:title', content: 'Owner Housing — Buy & Rent Properties Directly from Owners in India' },
+    { property: 'og:title', content: 'Owner Housing — Buy & Rent Properties Directly from Owners in Assam' },
     {
       property: 'og:description',
-      content: 'Find verified properties directly from owners across India. No brokers, no commission.',
+      content: 'Find verified properties directly from owners across Assam. No brokers, no commission.',
     },
     { property: 'og:url', content: BASE_URL },
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: 'Owner Housing' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Owner Housing — Properties from Owners' },
+    { name: 'twitter:title', content: 'Owner Housing — Properties from Owners in Assam' },
     {
       name: 'twitter:description',
-      content: 'Buy & rent properties directly from owners in India.',
+      content: 'Buy & rent properties directly from owners in Assam. Guwahati, Jorhat, Dibrugarh & more.',
     },
   ]
 }

@@ -7,7 +7,7 @@ export function Footer() {
           © {year} <span className="site-footer__brand">Owner Housing</span>. All rights reserved.
         </p>
         <p className="site-footer__tagline">
-          Buy & rent properties directly from owners across India. No brokers, no commission.
+          Buy & rent properties directly from owners across Assam. No brokers, no commission.
         </p>
       </div>
     </footer>
