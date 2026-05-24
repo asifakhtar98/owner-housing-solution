@@ -559,6 +559,11 @@ img {
   color: #5E35B1;
 }
 
+.badge--shop {
+  background: #E0F2F1;
+  color: #00695C;
+}
+
 .badge--type {
   background: var(--color-badge-type-bg);
   color: var(--color-badge-type);
@@ -738,6 +743,26 @@ img {
   font-size: var(--font-size-base);
   color: var(--color-text-secondary);
   margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.detail-page__map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent-light);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.detail-page__map-link:hover {
+  background: var(--color-accent);
+  color: white;
 }
 
 .detail-page__badges {

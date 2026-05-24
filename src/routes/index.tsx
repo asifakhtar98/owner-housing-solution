@@ -47,7 +47,7 @@ function HomePage() {
     if (category !== 'all') {
       result = result.filter((p) => {
         return p.offerings.some((o) => {
-          if (category === 'rent') return o === 'rent' || o === 'pg'
+          if (category === 'rent') return o === 'rent' || o === 'pg' || o === 'shop'
           return o === category
         })
       })

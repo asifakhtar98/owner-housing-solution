@@ -28,6 +28,8 @@ export interface Property {
     locality?: string
     state?: string
     pincode?: string
+    lat?: number
+    lng?: number
   }
   description?: string
   features?: string[]
@@ -64,6 +66,8 @@ export interface ResolvedProperty {
     locality: string
     state: string
     pincode: string
+    lat: number
+    lng: number
   }
   description: string
   features: string[]
@@ -100,6 +104,8 @@ export function resolveProperty(p: Property): ResolvedProperty {
       locality: p.location.locality ?? '',
       state: p.location.state ?? 'Assam',
       pincode: p.location.pincode ?? '',
+      lat: p.location.lat ?? 0,
+      lng: p.location.lng ?? 0,
     },
     description: p.description ?? '',
     features: p.features ?? [],
@@ -194,6 +200,7 @@ export function getOfferingLabel(offering: string): string {
     buy: 'Sale',
     rent: 'Rent',
     pg: 'PG',
+    shop: 'Shop',
   }
   return labels[offering] || offering
 }

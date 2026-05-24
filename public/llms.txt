@@ -1,6 +1,6 @@
 # Owner Housing
 
-> Owner Housing is a property listing platform for India where buyers and renters can find verified properties directly from owners — no brokers, no commission. Browse apartments, houses, villas, plots, PG accommodations, and commercial spaces across Guwahati, Jorhat, Dibrugarh, Silchar, Tezpur, Nagaon, and more.
+> Owner Housing is a property listing platform for India where buyers and renters can find verified properties directly from owners — no brokers, no commission. Browse apartments, houses, villas, plots, PG accommodations, and commercial spaces across Guwahati, and more.
 
 ## About
 
@@ -10,35 +10,17 @@ Owner Housing connects property seekers directly with property owners across Ass
 
 - [Homepage](https://ownerhousing.in/): Browse all property listings with filters for buy/rent, price range, and sorting options
 - [3 BHK Apartment in Six Mile, Guwahati](https://ownerhousing.in/listing/3bhk-apartment-buy-sixmile-guwahati): ₹75 L, 1350 sqft, For Sale
-- [2 BHK Flat for Rent in Zoo Road](https://ownerhousing.in/listing/2bhk-flat-rent-zoo-road-guwahati): ₹18,000/mo, 900 sqft, For Rent, Fully Furnished
-- [Independent House in Chandmari, Guwahati](https://ownerhousing.in/listing/independent-house-buy-chandmari-guwahati): ₹1.85 Cr, 2200 sqft, For Sale
-- [Residential Plot near Airport, Azara](https://ownerhousing.in/listing/residential-plot-buy-azara-guwahati): ₹35 L, 2160 sqft, For Sale
-- [PG for Working Professionals in Christian Basti](https://ownerhousing.in/listing/pg-accommodation-rent-christian-basti-guwahati): ₹7,500/mo, 150 sqft, For Rent, Fully Furnished
-- [Commercial Office Space on GS Road](https://ownerhousing.in/listing/office-space-rent-gs-road-guwahati): ₹45,000/mo, 1100 sqft, For Rent
-- [Shop Space in Fancy Bazaar](https://ownerhousing.in/listing/shop-space-buy-fancy-bazaar-guwahati): ₹1.20 Cr, 450 sqft, For Sale, Freehold
-- [2 BHK Apartment in AT Road, Jorhat](https://ownerhousing.in/listing/2bhk-apartment-buy-at-road-jorhat): ₹38 L, 850 sqft, For Sale
-- [Independent House for Rent in Dibrugarh](https://ownerhousing.in/listing/independent-house-rent-graham-bazaar-dibrugarh): ₹15,000/mo, 1400 sqft, For Rent
-- [Luxury Villa in Beltola, Guwahati](https://ownerhousing.in/listing/villa-buy-beltola-guwahati): ₹3.20 Cr, 3200 sqft, For Sale
-- [1 BHK Flat for Rent in Silchar](https://ownerhousing.in/listing/1bhk-flat-rent-silchar-town): ₹8,000/mo, 550 sqft, For Rent
-- [Residential Plot in Tezpur](https://ownerhousing.in/listing/residential-plot-buy-tezpur-town): ₹18 L, 1440 sqft, For Sale
-- [3 BHK Apartment for Rent in Narengi](https://ownerhousing.in/listing/3bhk-apartment-rent-narengi-guwahati): ₹25,000/mo, 1250 sqft, For Rent
-- [Independent House in Nagaon Town](https://ownerhousing.in/listing/independent-house-buy-nagaon-town): ₹55 L, 1600 sqft, For Sale
-- [2 BHK Flat in Paltan Bazaar, Guwahati](https://ownerhousing.in/listing/2bhk-flat-buy-paltan-bazaar-guwahati): ₹52 L, 780 sqft, For Sale
 - [Multiple Properties in Six Mile — Rent, PG & Sale](https://ownerhousing.in/listing/multi-property-sixmile-guwahati-rent-pg-sale): ₹7,500/mo, 3500 sqft, For Rent
+- [Commercial Shop Space in Six Mile, Guwahati](https://ownerhousing.in/listing/commercial-shop-rent-sixmile-guwahati): ₹25,000/mo, 450 sqft, For Rent
 
 ## Property Types Available
 
 - Apartments (1BHK, 2BHK, 3BHK)
-- Independent Houses
-- Plots / Land
-- PG Accommodations
-- Commercial Office Spaces
 - Shops / Retail Spaces
-- Villas
 
 ## Cities Covered
 
-Guwahati, Jorhat, Dibrugarh, Silchar, Tezpur, Nagaon
+Guwahati
 
 ## Contact
 

@@ -122,6 +122,17 @@ function ListingDetailPage() {
                   .filter(Boolean)
                   .join(', ')}
               </span>
+              {property.location.lat !== 0 && property.location.lng !== 0 && (
+                <a
+                  href={`https://maps.google.com/maps?q=${property.location.lat},${property.location.lng}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="detail-page__map-link"
+                  aria-label="View location on Google Maps"
+                >
+                  📌 View on Map
+                </a>
+              )}
             </div>
           )}
 
