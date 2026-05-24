@@ -16,7 +16,6 @@ export function ContactButtons({ contact, propertyTitle, size = 'small' }: Conta
 
   const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation()
-    e.preventDefault()
   }
 
   return (
