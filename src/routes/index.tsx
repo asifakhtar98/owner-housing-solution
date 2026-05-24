@@ -10,15 +10,24 @@ import { generateHomeMeta, generateWebsiteJsonLd } from '../utils/seo'
 const properties = (propertiesData as Property[]).map(resolveProperty)
 
 export const Route = createFileRoute('/')({
-  head: () => ({
-    meta: generateHomeMeta(),
-    scripts: [
-      {
-        type: 'application/ld+json',
-        children: JSON.stringify(generateWebsiteJsonLd()),
-      },
-    ],
-  }),
+  head: () => {
+    // Find the first featured property's image for LCP preload
+    const featured = properties.find((p) => p.featured)
+    const lcpImage = featured?.images[0]
+
+    return {
+      meta: generateHomeMeta(),
+      links: lcpImage
+        ? [{ rel: 'preload', as: 'image', href: lcpImage }]
+        : [],
+      scripts: [
+        {
+          type: 'application/ld+json',
+          children: JSON.stringify(generateWebsiteJsonLd()),
+        },
+      ],
+    }
+  },
   component: HomePage,
 })
 

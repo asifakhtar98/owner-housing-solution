@@ -18,7 +18,8 @@ export function ListingCard({ property }: ListingCardProps) {
         to="/listing/$slug"
         params={{ slug: property.slug }}
         className="listing-card__image-wrap"
-        aria-label={`View details of ${property.title}`}
+        tabIndex={-1}
+        aria-hidden="true"
       >
         {hasImage ? (
           <img

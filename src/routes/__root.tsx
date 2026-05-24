@@ -35,7 +35,8 @@ export const Route = createRootRoute({
         crossOrigin: 'anonymous',
       },
       {
-        rel: 'stylesheet',
+        rel: 'preload',
+        as: 'style',
         href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap',
       },
     ],
@@ -49,6 +50,24 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        {/* Load Google Fonts asynchronously to avoid render-blocking */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+          media="print"
+          id="google-fonts"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.getElementById('google-fonts').media='all'`,
+          }}
+        />
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+          />
+        </noscript>
       </head>
       <body>
         {children}
@@ -63,7 +82,7 @@ function RootComponent() {
     <>
       <header className="site-header" role="banner">
         <div className="site-header__inner">
-          <Link to="/" className="site-logo" aria-label="Owner Housing - Home">
+          <Link to="/" className="site-logo">
             <img src="/logo192.png" alt="Owner Housing" className="site-logo__img" width={36} height={36} />
             <span>
               Owner Housing

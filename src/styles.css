@@ -313,7 +313,7 @@ img {
 .filter-bar__price-value {
   font-size: var(--font-size-sm);
   font-weight: 700;
-  color: var(--color-price);
+  color: #92400E;
   min-width: 65px;
   text-align: right;
 }
@@ -399,7 +399,7 @@ img {
   position: absolute;
   top: var(--space-sm);
   left: var(--space-sm);
-  background: var(--color-featured);
+  background: #92400E;
   color: white;
   font-size: 10px;
   font-weight: 700;
@@ -565,7 +565,7 @@ img {
 
 .badge--owner {
   background: var(--color-accent-light);
-  color: var(--color-accent);
+  color: #065F46;
 }
 
 .badge--furnishing {
