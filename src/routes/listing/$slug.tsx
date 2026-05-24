@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import propertiesData from '../../data/properties.json'
 import type { Property } from '../../utils/formatPrice'
-import { resolveProperty, formatPrice, getPropertyTypeLabel, getFurnishingLabel, getRelativeTime } from '../../utils/formatPrice'
+import { resolveProperty, formatPrice, getPropertyTypeLabel, getFurnishingLabel, getRelativeTime, getOfferingLabel } from '../../utils/formatPrice'
 import { generateListingMeta, generateListingJsonLd, generateBreadcrumbJsonLd } from '../../utils/seo'
 import { ContactButtons } from '../../components/ContactButtons'
 import { Breadcrumbs } from '../../components/Breadcrumbs'
@@ -22,16 +22,21 @@ export const Route = createFileRoute('/listing/$slug')({
       { name: property.title, url: `/listing/${property.slug}` },
     ]
 
+    const listingJsonLd = generateListingJsonLd(property)
+    const jsonLdScripts = (Array.isArray(listingJsonLd) ? listingJsonLd : [listingJsonLd]).map(
+      (ld) => ({
+        type: 'application/ld+json' as const,
+        children: JSON.stringify(ld),
+      })
+    )
+
     return {
       meta: generateListingMeta(property),
       links: [
         { rel: 'canonical', href: `https://ownerhousing.in/listing/${property.slug}` },
       ],
       scripts: [
-        {
-          type: 'application/ld+json',
-          children: JSON.stringify(generateListingJsonLd(property)),
-        },
+        ...jsonLdScripts,
         {
           type: 'application/ld+json',
           children: JSON.stringify(generateBreadcrumbJsonLd(breadcrumbItems)),
@@ -122,9 +127,17 @@ function ListingDetailPage() {
 
           {/* Badges */}
           <div className="detail-page__badges">
-            <span className={`badge badge--${property.category}`}>
-              {property.category === 'buy' ? 'For Sale' : 'For Rent'}
-            </span>
+            {property.offerings.length > 1 ? (
+              property.offerings.map((offering) => (
+                <span key={offering} className={`badge badge--${offering}`}>
+                  {getOfferingLabel(offering)}
+                </span>
+              ))
+            ) : (
+              <span className={`badge badge--${property.category}`}>
+                {property.category === 'buy' ? 'For Sale' : 'For Rent'}
+              </span>
+            )}
             <span className="badge badge--type">
               {getPropertyTypeLabel(property.type)}
             </span>
@@ -170,9 +183,13 @@ function ListingDetailPage() {
           {property.description && (
             <section className="detail-page__section">
               <h2 className="detail-page__section-title">Description</h2>
-              <p className="detail-page__description" itemProp="description">
-                {property.description}
-              </p>
+              <div className="detail-page__description" itemProp="description">
+                {property.description.split('\n\n').map((para, i) => (
+                  <p key={i} className="detail-page__description-para">
+                    {para}
+                  </p>
+                ))}
+              </div>
             </section>
           )}
 

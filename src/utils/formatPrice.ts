@@ -39,6 +39,7 @@ export interface Property {
   }
   postedDate?: string
   featured?: boolean
+  offerings?: string[]
 }
 
 /**
@@ -74,6 +75,7 @@ export interface ResolvedProperty {
   }
   postedDate: string
   featured: boolean
+  offerings: string[]
 }
 
 /**
@@ -109,6 +111,7 @@ export function resolveProperty(p: Property): ResolvedProperty {
     },
     postedDate: p.postedDate ?? new Date().toISOString().split('T')[0],
     featured: p.featured ?? false,
+    offerings: p.offerings ?? [p.category],
   }
 }
 
@@ -181,4 +184,16 @@ export function getRelativeTime(dateStr: string): string {
   if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`
   if (diffDays < 365) return `${Math.floor(diffDays / 30)} months ago`
   return `${Math.floor(diffDays / 365)} years ago`
+}
+
+/**
+ * Get human-readable offering label
+ */
+export function getOfferingLabel(offering: string): string {
+  const labels: Record<string, string> = {
+    buy: 'Sale',
+    rent: 'Rent',
+    pg: 'PG',
+  }
+  return labels[offering] || offering
 }

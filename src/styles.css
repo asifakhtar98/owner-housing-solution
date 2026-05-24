@@ -415,6 +415,20 @@ img {
   letter-spacing: 0.05em;
 }
 
+.listing-card__multi-badge {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.02em;
+}
+
 .listing-card__body {
   padding: var(--space-lg);
   flex: 1;
@@ -538,6 +552,11 @@ img {
 .badge--rent {
   background: var(--color-badge-rent-bg);
   color: var(--color-badge-rent);
+}
+
+.badge--pg {
+  background: #EDE7F6;
+  color: #5E35B1;
 }
 
 .badge--type {
@@ -780,6 +799,14 @@ img {
   font-size: var(--font-size-base);
   color: var(--color-text-secondary);
   line-height: 1.8;
+}
+
+.detail-page__description-para {
+  margin: 0 0 var(--space-lg);
+}
+
+.detail-page__description-para:last-child {
+  margin-bottom: 0;
 }
 
 .detail-page__features {

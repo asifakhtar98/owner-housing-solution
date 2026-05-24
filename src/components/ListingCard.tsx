@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import type { ResolvedProperty } from '../utils/formatPrice'
-import { formatPrice, getPropertyTypeLabel, getRelativeTime } from '../utils/formatPrice'
+import { formatPrice, getPropertyTypeLabel, getRelativeTime, getOfferingLabel } from '../utils/formatPrice'
 import { ContactButtons } from './ContactButtons'
 
 interface ListingCardProps {
@@ -10,6 +10,7 @@ interface ListingCardProps {
 export function ListingCard({ property }: ListingCardProps) {
   const hasImage = property.images.length > 0
   const hasLocation = property.location.locality || property.location.city
+  const isMultiOffering = property.offerings.length > 1
 
   return (
     <article className="listing-card" id={`listing-${property.id}`}>
@@ -35,6 +36,11 @@ export function ListingCard({ property }: ListingCardProps) {
         )}
         {property.featured && (
           <span className="listing-card__featured-badge">Featured</span>
+        )}
+        {isMultiOffering && (
+          <span className="listing-card__multi-badge">
+            {property.offerings.length} Types
+          </span>
         )}
       </Link>
 
@@ -80,9 +86,17 @@ export function ListingCard({ property }: ListingCardProps) {
 
         <div className="listing-card__footer">
           <div className="listing-card__badges">
-            <span className={`badge badge--${property.category}`}>
-              {property.category === 'buy' ? 'For Sale' : 'For Rent'}
-            </span>
+            {isMultiOffering ? (
+              property.offerings.map((offering) => (
+                <span key={offering} className={`badge badge--${offering}`}>
+                  {getOfferingLabel(offering)}
+                </span>
+              ))
+            ) : (
+              <span className={`badge badge--${property.category}`}>
+                {property.category === 'buy' ? 'For Sale' : 'For Rent'}
+              </span>
+            )}
             <span className="badge badge--type">
               {getPropertyTypeLabel(property.type)}
             </span>
@@ -104,3 +118,4 @@ export function ListingCard({ property }: ListingCardProps) {
     </article>
   )
 }
+

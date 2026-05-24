@@ -42,6 +42,8 @@ public/             # Static assets (robots.txt, sitemap, llms.txt)
 2. Add the URL to `public/sitemap.xml`
 3. Run `npm run build` — the new page is auto-discovered and prerendered
 
+For multi-property listings (one owner, multiple types like rent/PG/sale), add `"offerings": ["rent", "pg", "buy"]` to the entry. The listing will appear under all matching category filters.
+
 ## Styling
 
 All styles live in `src/styles.css`. Use BEM naming: `.block__element--modifier`. Do not use Tailwind utility classes in components.

@@ -33,6 +33,8 @@ scripts/                  → Build-time generators
 2. Add URL to `public/sitemap.xml`
 3. Run `npm run build` (auto-generates `llms-full.txt`, prerender discovers new page)
 
+**Multi-property listings:** To list multiple property types (rent, PG, sale) under one URL, add `"offerings": ["rent", "pg", "buy"]` to the entry. The description should cover each property type. Omit `offerings` for single-category listings (defaults to `[category]`).
+
 ## When Adding a Component
 
 1. Create in `src/components/`

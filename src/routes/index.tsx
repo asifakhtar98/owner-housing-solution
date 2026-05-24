@@ -43,9 +43,14 @@ function HomePage() {
   const filteredProperties = useMemo(() => {
     let result = [...properties]
 
-    // Category filter
+    // Category filter — check offerings array for multi-property listings
     if (category !== 'all') {
-      result = result.filter((p) => p.category === category)
+      result = result.filter((p) => {
+        return p.offerings.some((o) => {
+          if (category === 'rent') return o === 'rent' || o === 'pg'
+          return o === category
+        })
+      })
     }
 
     // Price filter
