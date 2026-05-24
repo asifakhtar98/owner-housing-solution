@@ -2,11 +2,12 @@ import { useState, useMemo } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import propertiesData from '../data/properties.json'
 import type { Property } from '../utils/formatPrice'
+import { resolveProperty } from '../utils/formatPrice'
 import { ListingCard } from '../components/ListingCard'
 import { FilterBar } from '../components/FilterBar'
 import { generateHomeMeta, generateWebsiteJsonLd } from '../utils/seo'
 
-const properties = propertiesData as Property[]
+const properties = (propertiesData as Property[]).map(resolveProperty)
 
 export const Route = createFileRoute('/')({
   head: () => ({

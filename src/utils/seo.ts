@@ -1,11 +1,11 @@
-import type { Property } from './formatPrice'
+import type { ResolvedProperty } from './formatPrice'
 
 const BASE_URL = 'https://ownerhousing.in'
 
 /**
  * Generate JSON-LD for a RealEstateListing (detail pages)
  */
-export function generateListingJsonLd(property: Property): object {
+export function generateListingJsonLd(property: ResolvedProperty): object {
   const schemaTypeMap: Record<string, string> = {
     apartment: 'Apartment',
     house: 'SingleFamilyResidence',
@@ -22,17 +22,20 @@ export function generateListingJsonLd(property: Property): object {
     '@type': schemaTypeMap[property.type] || 'Residence',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: property.location.locality,
+      streetAddress: property.location.locality || property.location.city,
       addressLocality: property.location.city,
-      addressRegion: property.location.state,
-      postalCode: property.location.pincode,
+      addressRegion: property.location.state || 'Assam',
+      postalCode: property.location.pincode || undefined,
       addressCountry: 'IN',
     },
-    floorSize: {
+  }
+
+  if (property.area > 0) {
+    propertySchema.floorSize = {
       '@type': 'QuantitativeValue',
       value: property.area,
       unitText: property.areaUnit,
-    },
+    }
   }
 
   if (property.bedrooms > 0) {
@@ -44,9 +47,9 @@ export function generateListingJsonLd(property: Property): object {
     '@type': 'RealEstateListing',
     name: property.title,
     url: `${BASE_URL}/listing/${property.slug}`,
-    description: property.description,
+    description: property.description || property.title,
     datePosted: property.postedDate,
-    image: property.images[0],
+    image: property.images.length > 0 ? property.images[0] : undefined,
     about: propertySchema,
     offers: {
       '@type': 'Offer',
@@ -96,19 +99,25 @@ export function generateBreadcrumbJsonLd(
 /**
  * Generate head meta tags for a listing page
  */
-export function generateListingMeta(property: Property) {
+export function generateListingMeta(property: ResolvedProperty) {
+  const locationParts = [property.location.locality, property.location.city].filter(Boolean).join(', ')
+  const areaText = property.area > 0 ? `${property.area} ${property.areaUnit}` : ''
+  const descSnippet = property.description
+    ? property.description.slice(0, 120) + '...'
+    : property.title
+
   return [
     { title: `${property.title} | Owner Housing` },
     {
       name: 'description',
-      content: `${property.title} - ${property.area} ${property.areaUnit} in ${property.location.locality}, ${property.location.city}. ${property.description.slice(0, 120)}...`,
+      content: `${property.title}${areaText ? ` - ${areaText}` : ''} in ${locationParts}. ${descSnippet}`,
     },
     { property: 'og:title', content: `${property.title} | Owner Housing` },
     {
       property: 'og:description',
-      content: `${property.area} ${property.areaUnit} ${property.type} in ${property.location.locality}, ${property.location.city}`,
+      content: `${areaText ? `${areaText} ` : ''}${property.type} in ${locationParts}`,
     },
-    { property: 'og:image', content: property.images[0] },
+    ...(property.images.length > 0 ? [{ property: 'og:image', content: property.images[0] }] : []),
     { property: 'og:url', content: `${BASE_URL}/listing/${property.slug}` },
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: 'Owner Housing' },
@@ -116,9 +125,9 @@ export function generateListingMeta(property: Property) {
     { name: 'twitter:title', content: `${property.title} | Owner Housing` },
     {
       name: 'twitter:description',
-      content: `${property.area} ${property.areaUnit} ${property.type} in ${property.location.locality}, ${property.location.city}`,
+      content: `${areaText ? `${areaText} ` : ''}${property.type} in ${locationParts}`,
     },
-    { name: 'twitter:image', content: property.images[0] },
+    ...(property.images.length > 0 ? [{ name: 'twitter:image', content: property.images[0] }] : []),
   ]
 }
 

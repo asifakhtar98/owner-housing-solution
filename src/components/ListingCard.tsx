@@ -1,13 +1,16 @@
 import { Link } from '@tanstack/react-router'
-import type { Property } from '../utils/formatPrice'
+import type { ResolvedProperty } from '../utils/formatPrice'
 import { formatPrice, getPropertyTypeLabel, getRelativeTime } from '../utils/formatPrice'
 import { ContactButtons } from './ContactButtons'
 
 interface ListingCardProps {
-  property: Property
+  property: ResolvedProperty
 }
 
 export function ListingCard({ property }: ListingCardProps) {
+  const hasImage = property.images.length > 0
+  const hasLocation = property.location.locality || property.location.city
+
   return (
     <article className="listing-card" id={`listing-${property.id}`}>
       <Link
@@ -16,14 +19,20 @@ export function ListingCard({ property }: ListingCardProps) {
         className="listing-card__image-wrap"
         aria-label={`View details of ${property.title}`}
       >
-        <img
-          src={property.images[0]}
-          alt={property.title}
-          className="listing-card__image"
-          loading="lazy"
-          width="160"
-          height="110"
-        />
+        {hasImage ? (
+          <img
+            src={property.images[0]}
+            alt={property.title}
+            className="listing-card__image"
+            loading="lazy"
+            width="160"
+            height="110"
+          />
+        ) : (
+          <div className="listing-card__image listing-card__image--placeholder" aria-hidden="true">
+            🏠
+          </div>
+        )}
         {property.featured && (
           <span className="listing-card__featured-badge">Featured</span>
         )}
@@ -43,11 +52,13 @@ export function ListingCard({ property }: ListingCardProps) {
           </span>
         </div>
 
-        <div className="listing-card__meta">
-          <span className="listing-card__location">
-            📍 {property.location.locality}, {property.location.city}
-          </span>
-        </div>
+        {hasLocation && (
+          <div className="listing-card__meta">
+            <span className="listing-card__location">
+              📍 {[property.location.locality, property.location.city].filter(Boolean).join(', ')}
+            </span>
+          </div>
+        )}
 
         <div className="listing-card__details">
           {property.bedrooms > 0 && (
@@ -60,9 +71,11 @@ export function ListingCard({ property }: ListingCardProps) {
               🚿 {property.bathrooms} Bath
             </span>
           )}
-          <span className="listing-card__detail">
-            📐 {property.area} {property.areaUnit}
-          </span>
+          {property.area > 0 && (
+            <span className="listing-card__detail">
+              📐 {property.area} {property.areaUnit}
+            </span>
+          )}
         </div>
 
         <div className="listing-card__footer">

@@ -1,7 +1,7 @@
-import type { Property } from '../utils/formatPrice'
+import type { ResolvedProperty } from '../utils/formatPrice'
 
 interface ContactButtonsProps {
-  contact: Property['contact']
+  contact: ResolvedProperty['contact']
   propertyTitle: string
   size?: 'small' | 'large'
 }

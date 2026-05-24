@@ -1,12 +1,12 @@
 import { createFileRoute } from '@tanstack/react-router'
 import propertiesData from '../../data/properties.json'
 import type { Property } from '../../utils/formatPrice'
-import { formatPrice, getPropertyTypeLabel, getFurnishingLabel, getRelativeTime } from '../../utils/formatPrice'
+import { resolveProperty, formatPrice, getPropertyTypeLabel, getFurnishingLabel, getRelativeTime } from '../../utils/formatPrice'
 import { generateListingMeta, generateListingJsonLd, generateBreadcrumbJsonLd } from '../../utils/seo'
 import { ContactButtons } from '../../components/ContactButtons'
 import { Breadcrumbs } from '../../components/Breadcrumbs'
 
-const properties = propertiesData as Property[]
+const properties = (propertiesData as Property[]).map(resolveProperty)
 
 export const Route = createFileRoute('/listing/$slug')({
   head: ({ params }) => {
@@ -67,6 +67,9 @@ function ListingDetailPage() {
     { label: property.title },
   ]
 
+  const hasLocation = property.location.locality || property.location.pincode
+  const hasStats = property.area > 0 || property.bedrooms > 0 || property.bathrooms > 0
+
   return (
     <div className="site-container">
       <Breadcrumbs items={breadcrumbs} />
@@ -74,16 +77,18 @@ function ListingDetailPage() {
       <article className="detail-page" itemScope itemType="https://schema.org/RealEstateListing">
         <div className="detail-page__main">
           {/* Hero Image */}
-          <div className="detail-page__image-section">
-            <img
-              src={property.images[0]}
-              alt={property.title}
-              className="detail-page__image"
-              itemProp="image"
-              width="960"
-              height="400"
-            />
-          </div>
+          {property.images.length > 0 && (
+            <div className="detail-page__image-section">
+              <img
+                src={property.images[0]}
+                alt={property.title}
+                className="detail-page__image"
+                itemProp="image"
+                width="960"
+                height="400"
+              />
+            </div>
+          )}
 
           {/* Header: Title + Price */}
           <header className="detail-page__header">
@@ -99,12 +104,21 @@ function ListingDetailPage() {
           </header>
 
           {/* Location */}
-          <div className="detail-page__location">
-            <span aria-hidden="true">📍</span>
-            <span itemProp="address">
-              {property.location.locality}, {property.location.city}, {property.location.state} — {property.location.pincode}
-            </span>
-          </div>
+          {hasLocation && (
+            <div className="detail-page__location">
+              <span aria-hidden="true">📍</span>
+              <span itemProp="address">
+                {[
+                  property.location.locality,
+                  property.location.city,
+                  property.location.state,
+                  property.location.pincode ? `— ${property.location.pincode}` : '',
+                ]
+                  .filter(Boolean)
+                  .join(', ')}
+              </span>
+            </div>
+          )}
 
           {/* Badges */}
           <div className="detail-page__badges">
@@ -124,37 +138,43 @@ function ListingDetailPage() {
             )}
           </div>
 
-          {/* Stats Grid */}
-          <div className="detail-page__stats">
-            <div className="detail-page__stat">
-              <div className="detail-page__stat-value">{property.area}</div>
-              <div className="detail-page__stat-label">{property.areaUnit}</div>
-            </div>
-            {property.bedrooms > 0 && (
+          {/* Stats Grid — only render if there's something to show */}
+          {hasStats && (
+            <div className="detail-page__stats">
+              {property.area > 0 && (
+                <div className="detail-page__stat">
+                  <div className="detail-page__stat-value">{property.area}</div>
+                  <div className="detail-page__stat-label">{property.areaUnit}</div>
+                </div>
+              )}
+              {property.bedrooms > 0 && (
+                <div className="detail-page__stat">
+                  <div className="detail-page__stat-value">{property.bedrooms}</div>
+                  <div className="detail-page__stat-label">Bedrooms</div>
+                </div>
+              )}
+              {property.bathrooms > 0 && (
+                <div className="detail-page__stat">
+                  <div className="detail-page__stat-value">{property.bathrooms}</div>
+                  <div className="detail-page__stat-label">Bathrooms</div>
+                </div>
+              )}
               <div className="detail-page__stat">
-                <div className="detail-page__stat-value">{property.bedrooms}</div>
-                <div className="detail-page__stat-label">Bedrooms</div>
+                <div className="detail-page__stat-value">{getRelativeTime(property.postedDate)}</div>
+                <div className="detail-page__stat-label">Posted</div>
               </div>
-            )}
-            {property.bathrooms > 0 && (
-              <div className="detail-page__stat">
-                <div className="detail-page__stat-value">{property.bathrooms}</div>
-                <div className="detail-page__stat-label">Bathrooms</div>
-              </div>
-            )}
-            <div className="detail-page__stat">
-              <div className="detail-page__stat-value">{getRelativeTime(property.postedDate)}</div>
-              <div className="detail-page__stat-label">Posted</div>
             </div>
-          </div>
+          )}
 
           {/* Description */}
-          <section className="detail-page__section">
-            <h2 className="detail-page__section-title">Description</h2>
-            <p className="detail-page__description" itemProp="description">
-              {property.description}
-            </p>
-          </section>
+          {property.description && (
+            <section className="detail-page__section">
+              <h2 className="detail-page__section-title">Description</h2>
+              <p className="detail-page__description" itemProp="description">
+                {property.description}
+              </p>
+            </section>
+          )}
 
           {/* Features */}
           {property.features.length > 0 && (
@@ -173,7 +193,9 @@ function ListingDetailPage() {
 
         <aside className="detail-page__sidebar">
           <div className="detail-page__contact-card">
-            <h2 className="detail-page__contact-card-title">Contact Owner</h2>
+            <h2 className="detail-page__contact-card-title">
+              {property.contact.isOwner ? 'Contact Owner' : 'Contact'}
+            </h2>
             <p className="detail-page__contact-name">{property.contact.name}</p>
             <p className="detail-page__contact-label">
               {property.contact.isOwner ? 'Property Owner' : 'Agent'} · Verified Listing

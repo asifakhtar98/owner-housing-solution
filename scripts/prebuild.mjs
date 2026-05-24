@@ -18,10 +18,38 @@ const root = join(__dirname, '..')
 const publicDir = join(root, 'public')
 
 const BASE_URL = 'https://ownerhousing.in'
+const DEFAULT_PHONE = '+917002689673'
+const DEFAULT_CONTACT_NAME = 'Owner Housing'
 
-const properties = JSON.parse(
+const rawProperties = JSON.parse(
   readFileSync(join(root, 'src/data/properties.json'), 'utf-8')
 )
+
+// Resolve defaults for each property
+const properties = rawProperties.map(p => ({
+  ...p,
+  area: p.area ?? 0,
+  areaUnit: p.areaUnit ?? 'sqft',
+  bedrooms: p.bedrooms ?? 0,
+  bathrooms: p.bathrooms ?? 0,
+  furnishing: p.furnishing ?? 'na',
+  location: {
+    city: p.location.city,
+    locality: p.location?.locality ?? '',
+    state: p.location?.state ?? 'Assam',
+    pincode: p.location?.pincode ?? '',
+  },
+  description: p.description ?? '',
+  features: p.features ?? [],
+  images: p.images ?? [],
+  contact: {
+    name: p.contact?.name ?? DEFAULT_CONTACT_NAME,
+    phone: p.contact?.phone ?? DEFAULT_PHONE,
+    isOwner: p.contact?.isOwner ?? false,
+  },
+  postedDate: p.postedDate ?? new Date().toISOString().split('T')[0],
+  featured: p.featured ?? false,
+}))
 
 // ── Helpers ──────────────────────────────────────────────────────────────
 
@@ -140,23 +168,28 @@ function generateLlmsFullTxt() {
     if (p.bedrooms > 0) bedBath.push(`${p.bedrooms} Bedrooms`)
     if (p.bathrooms > 0) bedBath.push(`${p.bathrooms} Bathrooms`)
 
+    const locationParts = [p.location.locality, p.location.city, p.location.state, p.location.pincode].filter(Boolean)
+
     output += `## ${p.title}
 
 - **Price:** ${price}
 - **Category:** ${category}
 - **Type:** ${p.type.charAt(0).toUpperCase() + p.type.slice(1)}
-- **Area:** ${p.area} ${p.areaUnit}
-${bedBath.length > 0 ? `- **Configuration:** ${bedBath.join(', ')}\n` : ''}- **Furnishing:** ${p.furnishing === 'na' ? 'Not applicable' : p.furnishing.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
-- **Location:** ${p.location.locality}, ${p.location.city}, ${p.location.state} — ${p.location.pincode}
+`
+    if (p.area > 0) output += `- **Area:** ${p.area} ${p.areaUnit}\n`
+    if (bedBath.length > 0) output += `- **Configuration:** ${bedBath.join(', ')}\n`
+    if (p.furnishing !== 'na') {
+      output += `- **Furnishing:** ${p.furnishing.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}\n`
+    }
+    output += `- **Location:** ${locationParts.join(', ')}
 - **Contact:** ${p.contact.name} (${p.contact.isOwner ? 'Owner' : 'Agent'}) — Phone: ${p.contact.phone}
 - **Posted:** ${p.postedDate}
 - **URL:** ${BASE_URL}/listing/${p.slug}
 
-${p.description}
-
-**Amenities:** ${p.features.join(', ')}
-
----
+`
+    if (p.description) output += `${p.description}\n\n`
+    if (p.features.length > 0) output += `**Amenities:** ${p.features.join(', ')}\n\n`
+    output += `---
 
 `
   }

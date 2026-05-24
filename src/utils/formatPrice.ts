@@ -1,8 +1,55 @@
+export const DEFAULT_PHONE = '+917002689673'
+
+export const DEFAULT_CONTACT = {
+  name: 'Owner Housing',
+  phone: DEFAULT_PHONE,
+  isOwner: false,
+}
+
+/**
+ * Raw property shape as stored in properties.json.
+ * Only id, slug, title, type, category, price, priceUnit are required.
+ */
 export interface Property {
   id: string
   slug: string
   title: string
   type: 'apartment' | 'house' | 'villa' | 'plot' | 'commercial' | 'pg' | 'office' | 'shop' | 'warehouse'
+  category: 'buy' | 'rent'
+  price: number
+  priceUnit: 'total' | 'monthly'
+  area?: number
+  areaUnit?: string
+  bedrooms?: number
+  bathrooms?: number
+  furnishing?: 'fully-furnished' | 'semi-furnished' | 'unfurnished' | 'na'
+  location: {
+    city: string
+    locality?: string
+    state?: string
+    pincode?: string
+  }
+  description?: string
+  features?: string[]
+  images?: string[]
+  contact?: {
+    name?: string
+    phone?: string
+    isOwner?: boolean
+  }
+  postedDate?: string
+  featured?: boolean
+}
+
+/**
+ * Fully resolved property with all defaults applied.
+ * Consumers should use this type for rendering.
+ */
+export interface ResolvedProperty {
+  id: string
+  slug: string
+  title: string
+  type: Property['type']
   category: 'buy' | 'rent'
   price: number
   priceUnit: 'total' | 'monthly'
@@ -27,6 +74,42 @@ export interface Property {
   }
   postedDate: string
   featured: boolean
+}
+
+/**
+ * Apply defaults to a partial Property, returning a fully populated object.
+ */
+export function resolveProperty(p: Property): ResolvedProperty {
+  return {
+    id: p.id,
+    slug: p.slug,
+    title: p.title,
+    type: p.type,
+    category: p.category,
+    price: p.price,
+    priceUnit: p.priceUnit,
+    area: p.area ?? 0,
+    areaUnit: p.areaUnit ?? 'sqft',
+    bedrooms: p.bedrooms ?? 0,
+    bathrooms: p.bathrooms ?? 0,
+    furnishing: p.furnishing ?? 'na',
+    location: {
+      city: p.location.city,
+      locality: p.location.locality ?? '',
+      state: p.location.state ?? 'Assam',
+      pincode: p.location.pincode ?? '',
+    },
+    description: p.description ?? '',
+    features: p.features ?? [],
+    images: p.images ?? [],
+    contact: {
+      name: p.contact?.name ?? DEFAULT_CONTACT.name,
+      phone: p.contact?.phone ?? DEFAULT_CONTACT.phone,
+      isOwner: p.contact?.isOwner ?? DEFAULT_CONTACT.isOwner,
+    },
+    postedDate: p.postedDate ?? new Date().toISOString().split('T')[0],
+    featured: p.featured ?? false,
+  }
 }
 
 /**
@@ -73,8 +156,8 @@ export function getPropertyTypeLabel(type: Property['type']): string {
 /**
  * Get furnishing label
  */
-export function getFurnishingLabel(furnishing: Property['furnishing']): string {
-  const labels: Record<Property['furnishing'], string> = {
+export function getFurnishingLabel(furnishing: NonNullable<Property['furnishing']>): string {
+  const labels: Record<NonNullable<Property['furnishing']>, string> = {
     'fully-furnished': 'Fully Furnished',
     'semi-furnished': 'Semi Furnished',
     'unfurnished': 'Unfurnished',
